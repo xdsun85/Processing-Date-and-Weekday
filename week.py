@@ -140,8 +140,8 @@ def n_leaps(yyyy1, yyyy2):
     n = 0
     for y in range(yyyy1 + 1, yyyy2):
         if is_leap_year(y):
-            n += 1
-            y += 4
+            n = math.ceil((yyyy2 - y) / 4)
+            break
 
     return n
 
